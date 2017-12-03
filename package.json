@@ -1,0 +1,16 @@
+{
+  "name": "b_l",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "firebase": "^4.7.0",
+    "hapi": "16.4.3",
+    "mongodb-stitch": "^2.2.0"
+  }
+}

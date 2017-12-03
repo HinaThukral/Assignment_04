@@ -1,0 +1,43 @@
+{
+		
+	},
+	{
+      method:'DELETE',
+      path:'/book',
+      handler:function(request,response){
+          return firebase.database().ref("book").child('value').remove();
+      }
+
+  },
+  {
+   method: 'GET',
+    path: '/book/{bookID}',
+    handler: function(request, reply) {
+        return firebase.database().ref('books/' + request.params.bookID);
+        book.on('value', function (data) {
+            return reply(data);
+        });
+    }
+    }
+    
+const book = db.ref('book');
+
+book.set({
+    1:{
+    	Title:  "Mana",
+        Id:  "1",
+        Author :  "Koike",
+        Genre: "Science Fiction",
+        publication_info: "April 1, 2017",
+        Availability: "yes"
+    },
+	2:{
+    	Title:  "Hinaaaa",
+    	
+        Id:  "2",
+        Author :  "hiiiii",
+        Genre: "Science Fiction",        
+        date_published: "March 1, 2017",
+        Availability: "no"
+    }
+});
